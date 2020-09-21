@@ -240,6 +240,18 @@ export default (props) => {
             handleClose();
           }}
           component={Link}
+          to="/services"
+          classes={{ root: classes.menuItem }}
+        >
+          Services
+        </MenuItem>
+        <MenuItem
+          onClick={(event) => {
+            handleMenuItemClick(event, 1);
+            setValue(1);
+            handleClose();
+          }}
+          component={Link}
           to="/customsoftware"
           classes={{ root: classes.menuItem }}
         >
@@ -251,7 +263,7 @@ export default (props) => {
           to="/mobileapps"
           classes={{ root: classes.menuItem }}
         >
-          Mobile App Development
+          IOS/Android App Development
         </MenuItem>
         <MenuItem
           onClick={handleClose}

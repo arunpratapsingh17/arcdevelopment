@@ -90,7 +90,7 @@ export default function Footer(props) {
                 }}
                 to="/mobileapps"
               >
-                Mobile App Development
+                IOS/Android App Development
               </Grid>
               <Grid
                 item
