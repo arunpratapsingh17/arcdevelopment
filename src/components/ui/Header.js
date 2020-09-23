@@ -218,6 +218,7 @@ export default (props) => {
         component={Link}
         to="/estimate"
         className={classes.button}
+        onClick={() => props.setValue(5)}
       >
         Estimate bx
       </Button>
