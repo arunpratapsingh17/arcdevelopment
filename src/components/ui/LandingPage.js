@@ -320,6 +320,7 @@ const LandingPage = (props) => {
         </Grid>
       </Grid>
       <Grid item>
+        {/* Revolution Block */}
         <Grid
           container
           style={{ height: "100em", marginTop: "12em" }}
