@@ -86,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuItem: {
     ...theme.typography.tab,
+
     opacity: 0.7,
     "&:hover": {
       opacity: 1,
@@ -242,6 +243,7 @@ export default (props) => {
           }}
           component={Link}
           to="/services"
+          className={classes.menuItem}
           classes={{ root: classes.menuItem }}
         >
           Services
