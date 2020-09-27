@@ -75,7 +75,12 @@ const CustomSoftware = () => {
   };
   return (
     <Grid container className={classes.mainContainer} direction="column">
-      <Grid item container direction="row">
+      <Grid
+        item
+        container
+        direction="row"
+        justify={matchesMD ? "center" : undefined}
+      >
         <Hidden mdDown>
           <Grid
             item
@@ -90,7 +95,9 @@ const CustomSoftware = () => {
 
         <Grid item container direction="column" className={classes.heading}>
           <Grid item>
-            <Typography variant="h2">Custom Software Development</Typography>
+            <Typography variant="h2" align={matchesMD ? "center" : undefined}>
+              Custom Software Development
+            </Typography>
           </Grid>
           <Grid item>
             <Typography variant="body1" paragraph>
@@ -148,7 +155,10 @@ const CustomSoftware = () => {
           direction="column"
           md
           alignItems="center"
-          style={{ maxWidth: "40em" }}
+          style={{
+            maxWidth: "40em",
+            marginBottom: matchesSM ? "10em" : undefined,
+          }}
         >
           <Grid item>
             <Typography variant="h4">Save Energy</Typography>
@@ -163,7 +173,10 @@ const CustomSoftware = () => {
           direction="column"
           md
           alignItems="center"
-          style={{ maxWidth: "40em" }}
+          style={{
+            maxWidth: "40em",
+            marginBottom: matchesSM ? "10em" : undefined,
+          }}
         >
           <Grid item>
             <Typography variant="h4">Save Time</Typography>
@@ -189,7 +202,15 @@ const CustomSoftware = () => {
         </Grid>
       </Grid>
       <Grid item container direction="row">
-        <Grid item container direction="row" className={classes.itemContainer}>
+        <Grid
+          item
+          container
+          direction="row"
+          className={classes.itemContainer}
+          justify="space-around"
+          alignItems={matchesMD ? "center" : undefined}
+          style={{ marginBottom: "10em" }}
+        >
           <Grid item container direction="column" md>
             <Grid item>
               <Typography variant="h4">Digital Documents & Data</Typography>
@@ -219,6 +240,7 @@ const CustomSoftware = () => {
           item
           container
           direction="row"
+          style={{ marginLeft: "60%" }}
           className={classes.itemContainer}
           justify="flex-end"
         >
@@ -228,9 +250,17 @@ const CustomSoftware = () => {
               options={scaleOptions}
             ></Lottie>
           </Grid>
-          <Grid item container direction="column" md align="right">
+          <Grid
+            item
+            container
+            direction="column"
+            md
+            align={matchesSM ? "center" : "right"}
+          >
             <Grid item>
-              <Typography variant="h4">Scale</Typography>
+              <Typography variant="h4" align={matchesSM ? "center" : "right"}>
+                Scale
+              </Typography>
             </Grid>
             <Grid item>
               <Typography variant="body1" paragraph>
