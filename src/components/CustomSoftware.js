@@ -18,6 +18,7 @@ import roots from "../assets/root.svg";
 import documentsAnimation from "../animations/documentsAnimation/data";
 import automationAnimation from "../animations/automationAnimation/data.json";
 import uxAnimation from "../animations/uxAnimation/data";
+import CallToAction from "./ui/CallToAction";
 const useStyles = makeStyles((theme) => ({
   heading: {
     maxWidth: "40em",
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   mainContainer: {
     paddingLeft: "5em",
     paddingRight: "5em",
-    paddingTop: "2em",
+    // paddingTop: "2em",
     paddingBottom: "10em",
   },
   itemContainer: {
@@ -74,7 +75,7 @@ const CustomSoftware = () => {
     },
   };
   return (
-    <Grid container className={classes.mainContainer} direction="column">
+    <Grid container direction="column">
       <Grid
         item
         container
@@ -93,7 +94,13 @@ const CustomSoftware = () => {
           </Grid>
         </Hidden>
 
-        <Grid item container direction="column" className={classes.heading}>
+        <Grid
+          item
+          container
+          direction="column"
+          className={classes.heading}
+          style={{ marginLeft: "2em" }}
+        >
           <Grid item>
             <Typography variant="h2" align={matchesMD ? "center" : undefined}>
               Custom Software Development
@@ -206,7 +213,7 @@ const CustomSoftware = () => {
           item
           container
           direction="row"
-          className={classes.itemContainer}
+          className={classes.mainContainer}
           justify="space-around"
           alignItems={matchesMD ? "center" : undefined}
           style={{ marginBottom: "10em" }}
@@ -242,6 +249,7 @@ const CustomSoftware = () => {
           direction="row"
           style={{ marginLeft: "60%" }}
           className={classes.itemContainer}
+          className={classes.mainContainer}
           justify="flex-end"
         >
           <Grid item md>
@@ -311,7 +319,7 @@ const CustomSoftware = () => {
           direction={matchesMD ? "column" : "row"}
           justify="space-between"
           style={{ marginBottom: "20em" }}
-          className={classes.rowContainer}
+          className={classes.mainContainer}
         >
           <Grid
             item
@@ -413,6 +421,9 @@ const CustomSoftware = () => {
             </Grid>
           </Grid>
         </Grid>
+      </Grid>
+      <Grid>
+        <CallToAction />
       </Grid>
     </Grid>
   );
