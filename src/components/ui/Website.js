@@ -12,6 +12,7 @@ import analytics from "../../assets/analytics.svg";
 import seo from "../../assets/seo.svg";
 import outreach from "../../assets/outreach.svg";
 import ecommerce from "../../assets/ecommerce.svg";
+import CallToAction from "./CallToAction";
 const useStyles = makeStyles((theme) => ({
   heading: {
     maxWidth: "40em",
@@ -31,16 +32,18 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "30em",
   },
 }));
-const Website = () => {
+const Website = (props) => {
   const classes = useStyles();
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <Grid container direction="column">
       <Grid
         item
         container
-        direction="row"
+        direction={matchesSM ? "column" : "row"}
         justify={matchesMD ? "center" : undefined}
       >
         <Hidden mdDown>
@@ -89,7 +92,13 @@ const Website = () => {
           </Grid>
         </Hidden>
       </Grid>
-      <Grid item container direction="row" className={classes.mainContainer}>
+      <Grid
+        item
+        container
+        direction={matchesSM ? "column" : "row"}
+        className={classes.mainContainer}
+        style={{ marginTop: "10em" }}
+      >
         <Grid item>
           <Grid item container direction="column">
             <Grid item>
@@ -121,7 +130,7 @@ const Website = () => {
       <Grid
         item
         container
-        direction="row"
+        direction={matchesSM ? "column" : "row"}
         className={classes.mainContainer}
         alignItems="center"
         justify="flex-end"
@@ -162,7 +171,7 @@ const Website = () => {
       <Grid
         item
         container
-        direction="row"
+        direction={matchesSM ? "column" : "row"}
         className={classes.mainContainer}
         alignItems="center"
       >
@@ -202,10 +211,11 @@ const Website = () => {
       <Grid
         item
         container
-        direction="row"
+        direction={matchesSM ? "column" : "row"}
         className={classes.mainContainer}
         alignItems="center"
         justify="flex-end"
+        style={{ marginBottom: "10em" }}
       >
         <Grid item>
           <Grid item container direction="column">
@@ -225,6 +235,7 @@ const Website = () => {
             className={classes.paragraphContainer}
             paragraph
             style={{ marginLeft: "1em" }}
+            align={matchesSM ? "center" : undefined}
           >
             It's an universal fact that people now prefer online shopping over
             offline shopping.
@@ -239,6 +250,9 @@ const Website = () => {
             and more
           </Typography>
         </Grid>
+      </Grid>
+      <Grid item>
+        <CallToAction setValue={props.setValue} />
       </Grid>
     </Grid>
   );

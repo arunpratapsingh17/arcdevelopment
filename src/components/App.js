@@ -8,6 +8,7 @@ import Services from "./Services";
 import theme from "./ui/Theme";
 import CustomSoftware from "./CustomSoftware";
 import MobileApps from "./ui/MobileApps";
+import Revolution from "./ui/Revolution";
 import Website from "./ui/Website";
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -81,9 +82,13 @@ function App() {
           <Route
             exact
             path="/revolution"
-            component={() => {
-              return <div>Revolution</div>;
-            }}
+            render={(props) => (
+              <Revolution
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
           />
           <Route
             exact
