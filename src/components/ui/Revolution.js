@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import vision from "../../assets/vision.svg";
 import mockup from "../../assets/mockupIcon.svg";
 import review from "../../assets/reviewIcon.svg";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 // import design from "../assets/designIcon.svg";
 import build from "../../assets/buildIcon.svg";
 import launch from "../../assets/buildIcon.svg";
@@ -28,6 +29,8 @@ const useStyles = makeStyles((theme) => ({
 const Revolution = () => {
   const classes = useStyles();
   const theme = useTheme();
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesSmall = useMediaQuery(theme.breakpoints.down("sm"));
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -48,7 +51,10 @@ const Revolution = () => {
           <img
             src={vision}
             alt="Mountain through binoculars"
-            style={{ maxWidth: "40em", marginRight: "5em" }}
+            style={{
+              maxWidth: matchesSmall ? 300 : "40em",
+              marginRight: "5em",
+            }}
           />
         </Grid>
         <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
@@ -223,7 +229,11 @@ const Revolution = () => {
         container
         direction="row"
         className={classes.rowContainer}
-        style={{ backgroundColor: "#B3B3B3", height: "90em" }}
+        style={{
+          backgroundColor: "red",
+          height: "90em",
+          paddingBottom: "50px",
+        }}
       >
         <Grid item container direction="column" lg>
           <Grid item>
@@ -237,38 +247,91 @@ const Revolution = () => {
               paragraph
               style={{ color: "#fff", maxWidth: "20em" }}
             >
-              एवम् बनाने हमेहो। प्रेरना कम्प्युटर यन्त्रालय प्रोत्साहित ढांचा
-              विषय विशेष उनके तकरीबन प्रव्रुति तरीके उसीएक् सभीकुछ वास्तविक अधिक
-              ब्रौशर विज्ञान पहेला ७हल शीघ्र अधिकार दोषसके रिती और्४५० दोषसके
-              व्रुद्धि किया समाजो आधुनिक व्यवहार सामूहिक करता। उनके कीने पुस्तक
-              स्थापित कार्यलय प्रति
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+              tempor nec feugiat nisl pretium. Gravida arcu ac tortor dignissim
+              convallis aenean et. Ultricies lacus sed turpis tincidunt id
             </Typography>
             <Typography
               variant="body1"
               paragraph
               style={{ color: "#fff", maxWidth: "20em" }}
             >
-              सिद्धांत हार्डवेर वहहर नवंबर शुरुआत विज्ञान रखते संदेश देते प्राण
-              दिनांक वार्तालाप कार्यसिधान्तो कराना तकनीकी बातसमय विश्वव्यापि
-              रखते रखते गुजरना शारिरिक होसके बहुत गुजरना आधुनिक कम्प्युटर उन्हे
-              अतित सक्षम समस्याओ समस्याए सकते होसके ब्रौशर अत्यंत विश्व उनका
-              उसीएक् सम्पर्क जानकारी
+              Ullamcorper sit amet risus nullam eget. Purus faucibus ornare
+              suspendisse sed. Mauris nunc congue nisi vitae suscipit. Ut
+              tristique et egestas quis ipsum suspendisse. Metus aliquam
+              eleifend mi in. Felis bibendum ut tristique et egestas quis ipsum
             </Typography>
             <Typography
               variant="body1"
               paragraph
               style={{ color: "#fff", maxWidth: "20em" }}
             >
-              लाभो विशेष तकरीबन वर्तमान लाभो मानसिक अमितकुमार पहेला जैसी वास्तव
-              दस्तावेज प्रौध्योगिकी सीमित अपने मेंभटृ लचकनहि यायेका खरिदे कारन
-              बढाता तकनिकल प्रेरना स्थिति एकत्रित विकासक्षमता विकास रखति विकास
-              प्रमान दुनिया लेने बदले सीमित अंतर्गत संपुर्ण करके कराना एसेएवं
-              मुश्किल कार्यकर्ता समजते कुशलता लक्ष्य आधुनिक किया
+              Tincidunt eget nullam non nisi est sit. Nullam non nisi est sit
+              amet facilisis magna etiam tempor. Et odio pellentesque diam
+              volutpat. Pretium lectus quam id leo in vitae. Magna etiam tempor
+              orci eu lobortis elementum nibh. Eleifend donec pretium vulputate
+              sapien nec sagittis aliquam malesuada bibendum. Ultricies integer
             </Typography>
           </Grid>
         </Grid>
         <Grid item lg style={{ alignSelf: "center" }}>
           <img src={mockup} alt="basic website deisgn" />
+        </Grid>
+      </Grid>
+      <Grid
+        item
+        container
+        direction="row"
+        className={classes.rowContainer}
+        style={{
+          backgroundColor: "green",
+          height: "90em",
+          paddingBottom: "50px",
+        }}
+      >
+        <Grid item container direction="column" lg>
+          <Grid item>
+            <Typography variant="h4" gutterBottom style={{ color: "#000" }}>
+              Review
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography
+              variant="body1"
+              paragraph
+              style={{ color: "#fff", maxWidth: "20em" }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa
+              tempor nec feugiat nisl pretium. Gravida arcu ac tortor dignissim
+              convallis aenean et. Ultricies lacus sed turpis tincidunt id
+            </Typography>
+            <Typography
+              variant="body1"
+              paragraph
+              style={{ color: "#fff", maxWidth: "20em" }}
+            >
+              Ullamcorper sit amet risus nullam eget. Purus faucibus ornare
+              suspendisse sed. Mauris nunc congue nisi vitae suscipit. Ut
+              tristique et egestas quis ipsum suspendisse. Metus aliquam
+              eleifend mi in. Felis bibendum ut tristique et egestas quis ipsum
+            </Typography>
+            <Typography
+              variant="body1"
+              paragraph
+              style={{ color: "#fff", maxWidth: "20em" }}
+            >
+              Tincidunt eget nullam non nisi est sit. Nullam non nisi est sit
+              amet facilisis magna etiam tempor. Et odio pellentesque diam
+              volutpat. Pretium lectus quam id leo in vitae. Magna etiam tempor
+              orci eu lobortis elementum nibh. Eleifend donec pretium vulputate
+              sapien nec sagittis aliquam malesuada bibendum. Ultricies integer
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid item lg style={{ alignSelf: "center" }}>
+          <img src={review} alt="basic website deisgn" />
         </Grid>
       </Grid>
     </Grid>
